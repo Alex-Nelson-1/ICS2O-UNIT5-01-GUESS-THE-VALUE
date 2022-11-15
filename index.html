@@ -56,24 +56,22 @@
         </div>
       </header>
       <main class="mdl-layout__content">
-        <p></p>
-        <img
-          src="./images/notebook-animation.svg"
-          alt="Computer"
-          width="25%"
-          height="25%"
-        />
-        <p></p>
+        <div id="sliderValue">3</div>
+       <!-- Slider with Starting Value -->
+<input id="slider" class="mdl-slider mdl-js-slider" type="range"
+  min="1" max="6" value="3" tabindex="0"
+  onchange="updateSliderValue(this.value)">
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
+          onclick="guessNumber()"
         >
-          Say "Hello, World!"
+          Guess
         </button>
         <!-- basic text -->
         <p></p>
-        <div id="hello-world"></div>
+        <div id="guess"></div>
+        <div id="answer"></div>
       </main>
     </div>
   </body>
