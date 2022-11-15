@@ -14,21 +14,18 @@ if (navigator.serviceWorker) {
 }
 
 const randomNum = 4
-const slider = 
-
-/**
- * This function displays an alert.
- */
-function updateSliderValue(valueOfSlider) {
-  document.getElementById("sliderValue").innerHTML = valueOfSlider
-}
+const slider =
+  /**
+   * This function displays an alert.
+   */
+  function updateSliderValue(valueOfSlider) {
+    document.getElementById("sliderValue").innerHTML = valueOfSlider
+  }
 
 function guessNumber() {
-  if(slider == randomNum) {
+  if (slider == randomNum) {
     document.getElementById("answer").innerHTML = randomNum
-  }
-  else {
+  } else {
     document.getElementById("answer").innerHTML = "Incorrect"
   }
 }
-
