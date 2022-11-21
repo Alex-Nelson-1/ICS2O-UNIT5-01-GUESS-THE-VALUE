@@ -14,24 +14,26 @@ if (navigator.serviceWorker) {
 }
 
 //Input
-const randomNum = Math.floor(Math.random() * 6) + 1 
+const randomNum = Math.floor(Math.random() * 6) + 1
 
 function updateSliderValue(valueOfSlider) {
   document.getElementById("sliderValue").innerHTML = valueOfSlider
   //Process
-  
-  if(valueOfSlider == randomNum) {
-    
+
+  if (valueOfSlider == randomNum) {
     //Output
-    document.getElementById("answer").innerHTML = "You guessed right! The correct number was " + randomNum + "!"
-    document.getElementById("replay").innerHTML = "Please reload the page if you want to replay."
+    document.getElementById("answer").innerHTML =
+      "You guessed right! The correct number was " + randomNum + "!"
+    document.getElementById("replay").innerHTML =
+      "Please reload the page if you want to replay."
   }
-  
+
   //Process
   if (valueOfSlider != randomNum) {
-    
-  //Output
-    document.getElementById("answer").innerHTML = "Incorrect! The number was " + randomNum + "!" 
-    document.getElementById("replay").innerHTML = "Please reload the page if you want to replay." 
+    //Output
+    document.getElementById("answer").innerHTML =
+      "Incorrect! The number was " + randomNum + "!"
+    document.getElementById("replay").innerHTML =
+      "Please reload the page if you want to replay."
   }
 }
