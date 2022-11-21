@@ -13,19 +13,25 @@ if (navigator.serviceWorker) {
   })
 }
 
-const randomNum = 4
-const slider =
-  /**
-   * This function displays an alert.
-   */
-  function updateSliderValue(valueOfSlider) {
-    document.getElementById("sliderValue").innerHTML = valueOfSlider
-  }
+//Input
+const randomNum = Math.floor(Math.random() * 6) + 1 
 
-function guessNumber() {
-  if (slider == randomNum) {
-    document.getElementById("answer").innerHTML = randomNum
-  } else {
-    document.getElementById("answer").innerHTML = "Incorrect"
+function updateSliderValue(valueOfSlider) {
+  document.getElementById("sliderValue").innerHTML = valueOfSlider
+  //Process
+  
+  if(valueOfSlider == randomNum) {
+    
+    //Output
+    document.getElementById("answer").innerHTML = "You guessed right! The correct number was " + randomNum + "!"
+    document.getElementById("replay").innerHTML = "Please reload the page if you want to replay."
+  }
+  
+  //Process
+  if (valueOfSlider != randomNum) {
+    
+  //Output
+    document.getElementById("answer").innerHTML = "Incorrect! The number was " + randomNum + "!" 
+    document.getElementById("replay").innerHTML = "Please reload the page if you want to replay." 
   }
 }
